@@ -383,12 +383,12 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
       var curso = document.form1.curso.value;
 
       if (serial == 1) { //integrado
-        /* media = (
+        media = (
           parseFloat(document.form1.port6.value) +
           parseFloat(document.form1.port7.value) +
           parseFloat(document.form1.port8.value) +
-          parseFloat(document.form1.port9.value)) / 4; */
-        media = (parseFloat(document.form1.port9.value));
+          parseFloat(document.form1.port9.value)) / 4;
+        //media = (parseFloat(document.form1.port9.value));
       }
 
       if (serial == 2) { //Subsequente
