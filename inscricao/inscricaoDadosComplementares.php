@@ -756,7 +756,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                       <h2>Informe a média de suas notas de Química no 3° ano ou no 4° ano em caso de curso integrado (Técnico)</h2>
                       <h3>Informe as notas em uma escala de 0 a 100.</h3>
                       <?php
-                      campos_quimica_sub();
+                      campos_ciencias_integrado()
                       ?>
                       <div class="row">
                         <div class="col-md-4">
@@ -766,18 +766,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                       </div>
                       <br>
                       <hr />
-                      <h2>Informe a média de suas notas de Biologia no 3° ano ou no 4° ano em caso de curso integrado (Técnico)</h2>
-                      <h3>Informe as notas em uma escala de 0 a 100.</h3>
-                      <?php
-                      campos_biologia_sub();
-                      ?>
-                      <div class="row">
-                        <div class="col-md-4">
-                          <label>Soma de Biologia:</label>
-                          <input class="tfield form-control_disabled form-control" maxlength="4" id="maiorbio" name="maiorbio" value="" type="text" required readonly="1">
-                        </div>
-                      </div>
-                      <br>
                     <?php
 
                     }
