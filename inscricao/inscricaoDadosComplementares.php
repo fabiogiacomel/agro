@@ -390,7 +390,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
 
       if (media > 0) {
-        document.getElementById('maiormat').value = media.toFixed(2);
+        document.getElementById('maiorciencias').value = media.toFixed(2);
       }
     }
 
