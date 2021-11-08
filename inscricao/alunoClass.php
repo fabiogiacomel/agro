@@ -59,6 +59,7 @@ class Aluno
     private $media_matematica;
     private $media_biologia;
     private $media_quimica;
+    private $media_ciencias;
     private $bolsa_familia;
     private $nis; // Número do NIS adicionado em 31/05/2019 a pedido do Rude
 
@@ -165,6 +166,7 @@ class Aluno
                     $this->media_matematica = $obj->maiormat;
                     $this->media_biologia = $obj->maiorbio;
                     $this->media_quimica = $obj->maiorqui;
+                    $this->media_ciencias = $obj->ciencias;
                     $this->instituicao_formacao = $obj->instituicao_formacao;
                     $this->trabalha_area = $obj->trabalha_area;
                     $this->bolsa_familia = $obj->bolsa_familia;
@@ -482,7 +484,7 @@ $con->execute();
         try {
             GeraLog::getInstance()->log('recalcular notas iniciando update');
 
-            $sql = "update inscricoesnovas set maiorport={$this->media_portugues}, maiormat={$this->media_matematica},  maiorqui={$this->media_quimica}, maiorbio={$this->media_biologia} where cpf={$this->cpf}";
+            $sql = "update inscricoesnovas set maiorport={$this->media_portugues}, maiormat={$this->media_matematica},  maiorqui={$this->media_quimica}, maiorbio={$this->media_biologia}, maiorciencias={$this->media_ciencias} where cpf={$this->cpf}";
 
             GeraLog::getInstance()->log('salvarDadosComplementares por CPF');
 
