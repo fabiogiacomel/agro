@@ -369,27 +369,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         
       }
 
-      if (serial == 2) { //Subsequente
-        // media = (
-        // parseFloat(document.form1.mat6.value)+
-        // parseFloat(document.form1.mat7.value)+
-        // parseFloat(document.form1.mat8.value)+
-        // parseFloat(document.form1.mat9.value)+
-
-        //Se for do especialização pega media simples das materias do curso técnico
-        if (curso == 10) {
-          media = parseFloat(document.form1.mat1.value);
-        } else {
-          /*media = (
-            parseFloat(document.form1.mat1.value) +
-            parseFloat(document.form1.mat2.value) +
-            parseFloat(document.form1.mat3.value)) / 3;//Somente soma*/
-          media = (parseFloat(document.form1.mat3.value)); //Somente soma
-        }
-      }
-
-
-      if (media > 0) {
+     if (media > 0) {
         document.getElementById('maiorciencias').value = media.toFixed(2);
       }
     }
