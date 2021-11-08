@@ -360,7 +360,7 @@ $a->salvarPontuacao();
     ?>
     <div id="comprovante">
         <div id="logo">
-            <h2>CEEP - Agroinovação Prof. Benedito Leme da Silva</h2>
+            <h2>CEEP - Agroinovação Prof. Moacir Benedito Leme da Silva</h2>
         </div>
         <!-- <h4>CADASTRO DE RESERVA</h4>
  -->
