@@ -484,11 +484,12 @@ $con->execute();
         try {
             GeraLog::getInstance()->log('recalcular notas iniciando update');
 
-            $sql = "update inscricoesnovas set maiorport={$this->media_portugues}, maiormat={$this->media_matematica},  maiorqui={$this->media_quimica}, maiorbio={$this->media_biologia}, maiorciencias={$this->media_ciencias} where cpf={$this->cpf}";
+            $sql = "update inscricoesnovas set maiorport={$this->media_portugues}, maiormat={$this->media_matematica}, maiorciencias={$this->media_ciencias} where cpf={$this->cpf}";
 
             GeraLog::getInstance()->log('salvarDadosComplementares por CPF');
 
-            $con = $c = new Conexao();        $con = $c->prepare($sql);
+            $con = $c = new Conexao();        
+            $con = $c->prepare($sql);
 
             // $con->bindValue(":p1",    $this->media_portugues);//echo $this->media_portugues;
             // $con->bindValue(":p2",    $this->media_matematica);//echo $this->media_matematica;
