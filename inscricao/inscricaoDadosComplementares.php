@@ -839,7 +839,7 @@ function campos_matematica_integrado()
 function campos_portugues_integrado()
 {
   echo '<div class="row">
-            <!--<div class="col-md-3">
+            <div class="col-md-3">
               <label>5a Série / 6° Ano..:</label>
               <input type="text" placeholder="Exemplo: 60" class="tfield form-control  nota" maxlength="3" pattern="[0-9]{2}|[1][0]{2}" title="Informe a nota com 2 dígitos de 00 a 100" onChange="Calc_Med_Pt()" id="virtport6" name="port6" value="" type="text" OnKeyPress="">
             </div>
@@ -850,7 +850,7 @@ function campos_portugues_integrado()
             <div class="col-md-3">
               <label>7a Série / 8° Ano..:</label>
               <input type="text" placeholder="Exemplo: 60" class="tfield form-control  nota" maxlength="3" pattern="[0-9]{2}|[1][0]{2}" title="Informe a nota com 2 dígitos de 00 a 100" onChange="Calc_Med_Pt()" id="virtport8" name="port8" value="" type="text" OnKeyPress="">
-            </div>-->
+            </div>
             <div class="col-md-3">
               <label>Informe a média das notas de Português do 9° Ano:</label>
               <input type="text" placeholder="Exemplo: 60" class="tfield form-control  nota" maxlength="3" pattern="[0-9]{2}|[1][0]{2}" title="Informe a nota com 2 dígitos de 00 a 100" onChange="Calc_Med_Pt()" id="virtport0" name="port9" value="" type="text" OnKeyPress="">
