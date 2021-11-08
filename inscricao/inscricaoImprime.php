@@ -188,8 +188,11 @@ if ($a->__get('serial') == 2) { //subsequente
 
 if ($a->__get('serial') == 1) { //integrado
     $pontuacao = $pontuacao + (($a->__get('media_portugues') + $a->__get('media_matematica')) / 2);
-    $pontuacao_curso2 = $pontuacao_curso2 + (($a->__get('media_portugues') + $a->__get('media_matematica')) / 2);
 }
+if ($a->__get('curso') == 18) { //integrado
+    $pontuacao = ($pontuacao + ($a->__get('media_ciencias')) / 2);
+}
+
 if ($a->__get('serial') == 2) { //subsequente
     if ($a->__get('curso') == 4) { //enfermagem
         $pontuacao = $pontuacao +
