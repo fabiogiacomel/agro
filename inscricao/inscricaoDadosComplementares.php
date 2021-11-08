@@ -361,12 +361,12 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
       var curso = document.form1.curso.value;
 
       if (serial == 1) { //integrado
-        /*  media = (
-           parseFloat(document.form1.mat6.value) +
-           parseFloat(document.form1.mat7.value) +
-           parseFloat(document.form1.mat8.value) +
-           parseFloat(document.form1.mat9.value)) / 4;//agora so soma */
-        media = (parseFloat(document.form1.mat9.value)); //agora so soma
+           media = (
+           parseFloat(document.form1.ciencias6.value) +
+           parseFloat(document.form1.ciencias7.value) +
+           parseFloat(document.form1.ciencias8.value) +
+           parseFloat(document.form1.ciencias9.value)) / 4;//agora so soma */
+        
       }
 
       if (serial == 2) { //Subsequente
