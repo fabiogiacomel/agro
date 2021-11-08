@@ -143,6 +143,27 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     //   });
     // });
 
+    function mensagem() {
+
+      // var curso  = document.form1.curso.value;
+
+      // if (curso==1 || curso==5){
+      //     alert('Palestra esclarecedora sobre currículo e perfil profissional no dia 09/11/2017. Para os cursos de Administração e Informática');
+      // }
+      // if (curso==2 || curso==3){
+      //   alert('Palestra esclarecedora sobre currículo e perfil profissional no dia 10/11/2017. Para os cursos de Eletromecânica e Eletrônica');
+      // }
+
+      // if (curso==6 || curso==9){
+      //     alert('Palestra esclarecedora sobre currículo e perfil profissional no dia 11/11/2017. Para os cursos de Edificações e Meio Ambiente');
+      // }
+
+      // if (curso==4 || curso==7){
+      //     alert('Palestra esclarecedora sobre currículo e perfil profissional no dia 12/11/2017. Para os cursos de Enfermagem e Segurança do Trabalho');
+      // }
+
+      //alert('A abertura de turmas e a efetivação da matrícula, estão vinculadas ao número de 35 (trinta e cinco) interessados ao final deste processo classificador (conforme Resolução n° 4527/2011 - GS/SEED).');
+    }
   </script>
   <style>
     /*label{width: 150px; display: inline-block;}*/
@@ -173,6 +194,11 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
 
   <script type="text/javascript">
+    function validar2() {
+      alert('1');
+      return false;
+
+    }
 
     function inicializar() {
       document.getElementById('tipo_necessidade').style.display = 'none';
@@ -243,7 +269,22 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         // document.form1.ensinofundamental.focus;
         return false;
       }
+      /* Retirando a Renda Familiar 05/11/2021
+            if (renda_familiar == 0) {
+              document.getElementById('msg_erro').innerHTML =
+                "<div id='erro' class='alert alert-danger'>Erro: Selecione sua Renda Familiar</div>";
+              document.form1.renda.focus;
+              return false;
+            }
+      
+      if (abandono_curso == 0) {
+        document.getElementById('msg_erro').innerHTML =
+          "<div id='erro' class='alert alert-danger'>Erro: Selecione a informação sobre abandono de curso</div>";
+        document.form1.abandono.focus;
+        return false;
+      }
 
+*/
       if (isNaN(parseFloat(document.getElementById('maiormat').value)) ||
         (parseFloat(document.getElementById('maiormat').value) < 50)) {
         document.getElementById('msg_erro').innerHTML =
@@ -286,6 +327,27 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
            parseFloat(document.form1.mat9.value)) / 4;//agora so soma */
         media = (parseFloat(document.form1.mat9.value)); //agora so soma
       }
+
+      if (serial == 2) { //Subsequente
+        // media = (
+        // parseFloat(document.form1.mat6.value)+
+        // parseFloat(document.form1.mat7.value)+
+        // parseFloat(document.form1.mat8.value)+
+        // parseFloat(document.form1.mat9.value)+
+
+        //Se for do especialização pega media simples das materias do curso técnico
+        if (curso == 10) {
+          media = parseFloat(document.form1.mat1.value);
+        } else {
+          /*media = (
+            parseFloat(document.form1.mat1.value) +
+            parseFloat(document.form1.mat2.value) +
+            parseFloat(document.form1.mat3.value)) / 3;//Somente soma*/
+          media = (parseFloat(document.form1.mat3.value)); //Somente soma
+        }
+      }
+
+
       if (media > 0) {
         document.getElementById('maiormat').value = media.toFixed(2);
       }
@@ -342,27 +404,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
       }
     }
 
-
-
-    function Calc_Med_Ciencias() {
-      //document.getElementById('$portugues').value=document.getElementById('$portugues').value + 1;
-
-      var media = 0.00;
-      var serial = document.form1.serial.value;
-      var curso = document.form1.curso.value;
-
-      if (serial == 1) { //integrado
-        media = (
-          parseFloat(document.form1.ciencias6.value) +
-          parseFloat(document.form1.ciencias7.value) +
-          parseFloat(document.form1.ciencias8.value) +
-          parseFloat(document.form1.ciencias9.value)) / 4;
-        //media = (parseFloat(document.form1.port9.value));
-      }
-
-
-
-
     function Calc_Med_Pt() {
       //document.getElementById('$portugues').value=document.getElementById('$portugues').value + 1;
 
@@ -371,12 +412,12 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
       var curso = document.form1.curso.value;
 
       if (serial == 1) { //integrado
-        media = (
+        /* media = (
           parseFloat(document.form1.port6.value) +
           parseFloat(document.form1.port7.value) +
           parseFloat(document.form1.port8.value) +
-          parseFloat(document.form1.port9.value)) / 4;
-        //media = (parseFloat(document.form1.port9.value));
+          parseFloat(document.form1.port9.value)) / 4; */
+        media = (parseFloat(document.form1.port9.value));
       }
 
       if (serial == 2) { //Subsequente
@@ -403,6 +444,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
       }
     }
   </script>
+</head>
+  
 </head>
 
 <body onload="inicializar()">
