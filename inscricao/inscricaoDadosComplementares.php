@@ -49,7 +49,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
   //if ($_POST['curso']==4){//se curso enfermagem
   //$a->__set('media_biologia', @$_POST['maiorbio']);
   //$a->__set('media_quimica', @$_POST['maiorqui']);
-  $a->__set('media_ciencias', @$_POST['maiorciencias']);
+  //$a->__set('media_ciencias', @$_POST['maiorciencias']);
 
   if ($a->__get('serial') == 1) { //Integrado
     $a->__set('matematica_n1', $_POST['mat6']);
