@@ -89,8 +89,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     } else {
       echo "Erro ao salvar dados complementares";
     }
-  }
-}
 ?>
 
 <!doctype html>
@@ -359,6 +357,27 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         document.getElementById('maiorqui').value = media.toFixed(2);
       }
     }
+
+
+
+    function Calc_Med_Ciencias() {
+      //document.getElementById('$portugues').value=document.getElementById('$portugues').value + 1;
+
+      var media = 0.00;
+      var serial = document.form1.serial.value;
+      var curso = document.form1.curso.value;
+
+      if (serial == 1) { //integrado
+        media = (
+          parseFloat(document.form1.ciencias6.value) +
+          parseFloat(document.form1.ciencias7.value) +
+          parseFloat(document.form1.ciencias8.value) +
+          parseFloat(document.form1.ciencias9.value)) / 4;
+        //media = (parseFloat(document.form1.port9.value));
+      }
+
+
+
 
     function Calc_Med_Pt() {
       //document.getElementById('$portugues').value=document.getElementById('$portugues').value + 1;
