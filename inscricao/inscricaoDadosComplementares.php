@@ -49,7 +49,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
   //if ($_POST['curso']==4){//se curso enfermagem
   $a->__set('media_biologia', @$_POST['maiorbio']);
   $a->__set('media_quimica', @$_POST['maiorqui']);
-
+}
   if ($a->__get('serial') == 1) { //Integrado
     $a->__set('matematica_n1', $_POST['mat6']);
     $a->__set('matematica_n2', $_POST['mat7']);
@@ -64,7 +64,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
   }
 
-  //}
   echo "Notas qui" . @$_POST['maiorqui'];
   echo "NOtas bio" . @$_POST['maiorbio'];
 
@@ -773,5 +772,4 @@ function campos_ciencias_integrado()
             </div>
           </div>';
 }
-
 ?>
