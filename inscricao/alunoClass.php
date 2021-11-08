@@ -535,7 +535,7 @@ $con->execute();
             $con->bindValue(":p6", $this->media_matematica);
             //echo $this->media_matematica;
             $con->bindValue(":p7", $this->media_quimica);
-            $con->bindValue(":ph", $this->media_ciencias);
+            $con->bindValue(":pk", $this->media_ciencias);
             //echo $this->media_biologia;
             $con->bindValue(":p8", $this->media_biologia);
             //echo $this->media_quimica;
