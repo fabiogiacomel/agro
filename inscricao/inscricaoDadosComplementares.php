@@ -629,14 +629,11 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
                     <br />
                     <?php
-                      if ($a->__get('serial') == 1) {
-                        echo "<h2>Informe a média de suas notas de Português</h2>";
-                      } else {
-                        echo "<h2>Informe a média de suas notas de Portugues da 3ª série do Ensino Médio Regular ou a média de suas notas da 4ª série do Ensino Técnico</h2>";
-                      }
-                      echo "<h4>Informe as notas em uma escala de 0 a 100.</h4>";
-                    }
-
+                      
+                    echo "<h2>Informe a média de suas notas de Português</h2>";
+                    echo "<h2>Informe a média de suas notas de Portugues da 3ª série do Ensino Médio Regular ou a média de suas notas da 4ª série do Ensino Técnico</h2>";
+                    echo "<h4>Informe as notas em uma escala de 0 a 100.</h4>";
+                    
                     echo "<input type='hidden' name='cpf' value='" . $a->__get('cpf') . "' readonly/>";
                     echo "<input type='hidden' name='serial' value='" . $a->__get('serial') . "' readonly/>";
                     echo "<input type='hidden' name='curso' value='" . $a->__get('curso') . "' readonly/>";
