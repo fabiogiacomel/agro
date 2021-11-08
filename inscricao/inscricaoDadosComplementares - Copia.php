@@ -58,7 +58,6 @@ if ($a->__get('serial') == 1)
     } else {
       echo "Erro ao salvar dados complementares";
     }
-  }
 ?>
 
 <!doctype html>
