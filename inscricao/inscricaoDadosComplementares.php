@@ -737,7 +737,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                         // echo "campos_matematica_sub";
                       }
                     }
-                    if ($curso != 10) { //Se não for Especialização em enfermagem
+                    
                     ?> <div class="row">
                         <div class="col-md-4">
                           <label>Média em Matemática:</label>
@@ -746,22 +746,20 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                       </div>
                       <br>
                     <?php
-                    }
-                    //if ($curso == 4 || $curso2 == 4) { //Sub Enfermagem
 
-                    if ($curso == 4 || $curso == 17 || $curso == 18) { //Sub Enfermagem
+                    if ($curso == 18) { 
                     ?>
                       <hr />
 
-                      <h2>Informe a média de suas notas de Química no 3° ano ou no 4° ano em caso de curso integrado (Técnico)</h2>
+                      <h2>Informe a média de suas notas de Ciências</h2>
                       <h3>Informe as notas em uma escala de 0 a 100.</h3>
                       <?php
                       campos_ciencias_integrado()
                       ?>
                       <div class="row">
                         <div class="col-md-4">
-                          <label>Soma de Química:</label>
-                          <input class="tfield form-control_disabled form-control" maxlength="4" id="maiorqui" name="maiorqui" value="" type="text" required readonly="1">
+                          <label>Soma de Ciências:</label>
+                          <input class="tfield form-control_disabled form-control" maxlength="4" id="maiorciencias" name="maiorciencias" value="" type="text" required readonly="1">
                         </div>
                       </div>
                       <br>
