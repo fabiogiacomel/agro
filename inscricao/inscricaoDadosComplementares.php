@@ -12,45 +12,31 @@ $pagina = "?pagina=dadosComplementares&";
 $resposta = null;
 
 $cpf = "";
-if (isset($_GET['cpf'])) {
+if (isset($_GET['cpf'])) 
+{
   $cpf = $_GET['cpf'];
   $a->__set('cpf', $cpf);
   $a->carregar();
 }
 
-// $serial = "";
-// if(isset($_POST['serial'])){
-//   $serial = $_POST['serial'];
-// }
-
 $acao = "incluir";
 
-if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+if ($_SERVER['REQUEST_METHOD'] == 'POST') 
+{
   $a->__set('cpf', preg_replace("/[^0-9]/", "", $_POST['cpf']));
   $a->__set('ensinomedio', @$_POST['ensinomedio']);
   $a->__set('ensinofundamental', @$_POST['ensinofundamental']);
-  // $a->__set('renda', $_POST['renda']); 05/11/2021
-  // $a->__set('comprovante_renda', $_POST['comprovante_renda']); //25/05/18 desativado 05/11/2021
   $a->__set('abandono', $_POST['abandono']);
-
   $a->__set('media_portugues', $_POST['maiorport']);
-
-  //echo "O curso é ". $_POST['curso'];
-  if ($_POST['curso'] == 10) { //se curso especialização seta 0 (maiorport)
-    $a->__set('media_matematica', 0);
-  } else {
-    $a->__set('media_matematica', $_POST['maiormat']);
-  }
   $a->__set('bolsa_familia', $_POST['bolsa_familia']);
   if ($_POST['bolsa_familia'] == 1) {
     $a->__set('nis', $_POST['nis']);
   }
 
-  //if ($_POST['curso']==4){//se curso enfermagem
-  $a->__set('media_biologia', @$_POST['maiorbio']);
-  $a->__set('media_quimica', @$_POST['maiorqui']);
 }
-  if ($a->__get('serial') == 1) { //Integrado
+
+if ($a->__get('serial') == 1) 
+{ //Integrado
     $a->__set('matematica_n1', $_POST['mat6']);
     $a->__set('matematica_n2', $_POST['mat7']);
     $a->__set('matematica_n3', $_POST['mat8']);
@@ -60,23 +46,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $a->__set('portugues_n2', $_POST['port7']);
     $a->__set('portugues_n3', $_POST['port8']);
     $a->__set('portugues_n4', $_POST['port9']);
-  }
+}
 
-
-  echo "Notas qui" . @$_POST['maiorqui'];
-  echo "NOtas bio" . @$_POST['maiorbio'];
-
-  if (isset($_POST['instituicao_formacao'])) {
-    $a->__set('instituicao_formacao', $_POST['instituicao_formacao']);
-  } else {
-    $a->__set('instituicao_formacao', 0);
-  }
-
-  //if($a->__get('serial')==2){ //Apenas para o subsequente
-  // Desativado em 05/11/2021 $a->__set('trabalha_area', @$_POST['trabalha_area']);
-  //}else{
-  //  $a->__set('trabalha_area','1');
-  //}
   $a->__set('tipo_necessidade', $_POST['tipo_necessidade']);
 
   if ($_GET['acao'] == 'incluir') {
@@ -221,22 +192,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         // document.form1.ensinofundamental.focus;
         return false;
       }
-      /* Retirando a Renda Familiar 05/11/2021
-            if (renda_familiar == 0) {
-              document.getElementById('msg_erro').innerHTML =
-                "<div id='erro' class='alert alert-danger'>Erro: Selecione sua Renda Familiar</div>";
-              document.form1.renda.focus;
-              return false;
-            }
-      
-      if (abandono_curso == 0) {
-        document.getElementById('msg_erro').innerHTML =
-          "<div id='erro' class='alert alert-danger'>Erro: Selecione a informação sobre abandono de curso</div>";
-        document.form1.abandono.focus;
-        return false;
-      }
 
-*/
       if (isNaN(parseFloat(document.getElementById('maiormat').value)) ||
         (parseFloat(document.getElementById('maiormat').value) < 50)) {
         document.getElementById('msg_erro').innerHTML =
@@ -279,27 +235,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
            parseFloat(document.form1.mat9.value)) / 4;//agora so soma */
         media = (parseFloat(document.form1.mat9.value)); //agora so soma
       }
-
-      if (serial == 2) { //Subsequente
-        // media = (
-        // parseFloat(document.form1.mat6.value)+
-        // parseFloat(document.form1.mat7.value)+
-        // parseFloat(document.form1.mat8.value)+
-        // parseFloat(document.form1.mat9.value)+
-
-        //Se for do especialização pega media simples das materias do curso técnico
-        if (curso == 10) {
-          media = parseFloat(document.form1.mat1.value);
-        } else {
-          /*media = (
-            parseFloat(document.form1.mat1.value) +
-            parseFloat(document.form1.mat2.value) +
-            parseFloat(document.form1.mat3.value)) / 3;//Somente soma*/
-          media = (parseFloat(document.form1.mat3.value)); //Somente soma
-        }
-      }
-
-
       if (media > 0) {
         document.getElementById('maiormat').value = media.toFixed(2);
       }
