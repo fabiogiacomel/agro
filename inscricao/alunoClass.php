@@ -166,7 +166,7 @@ class Aluno
                     $this->media_matematica = $obj->maiormat;
                     $this->media_biologia = $obj->maiorbio;
                     $this->media_quimica = $obj->maiorqui;
-                    $this->media_ciencias = $obj->ciencias;
+                    $this->media_ciencias = $obj->maiorciencias;
                     $this->instituicao_formacao = $obj->instituicao_formacao;
                     $this->trabalha_area = $obj->trabalha_area;
                     $this->bolsa_familia = $obj->bolsa_familia;
