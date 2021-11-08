@@ -34,7 +34,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
   $a->__set('abandono', $_POST['abandono']);
 
   $a->__set('media_portugues', $_POST['maiorport']);
-
+  $a->__set('media_ciencias', $_POST['maiorciencias']);
   //echo "O curso é ". $_POST['curso'];
   if ($_POST['curso'] == 10) { //se curso especialização seta 0 (maiorport)
     $a->__set('media_matematica', 0);
