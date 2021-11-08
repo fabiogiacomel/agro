@@ -231,6 +231,7 @@ if (strtotime($data1) > strtotime($data2)) {
 
       //Integrado tarde
       if (serial == 1 && periodo == 2) {
+        document.getElementById('curso').options.add(new Option("Nenhum curso para esta Modalidade e Período", "0"));
         // document.getElementById('curso').length = 0;
         // document.getElementById('curso').options.length = 0;
         // document.getElementById('curso').options.add(new Option("Selecione um curso", "0"));
@@ -240,8 +241,8 @@ if (strtotime($data1) > strtotime($data2)) {
         // document.getElementById('curso').options.add(new Option("Eletromecânica  ", "3"));
         // document.getElementById('curso').options.add(new Option("Desenvolvimento de Sistemas  ", "19"));
         // document.getElementById('curso').options.add(new Option("Meio Ambiente  ", "6"));
-        document.getElementById('curso').options.add(new Option("TÉCNICO EM AGRONEGÓCIOS  ", "17"));
-        document.getElementById('curso').options.add(new Option("TÉCNICO AGRÍCOLA  ", "18"));
+        //document.getElementById('curso').options.add(new Option("TÉCNICO EM AGRONEGÓCIOS  ", "17"));
+        //document.getElementById('curso').options.add(new Option("TÉCNICO AGRÍCOLA  ", "18"));
 
       }
 
