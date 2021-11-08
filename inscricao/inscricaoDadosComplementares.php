@@ -62,7 +62,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $a->__set('portugues_n4', $_POST['port9']);
   }
 
-  }
 
   echo "Notas qui" . @$_POST['maiorqui'];
   echo "NOtas bio" . @$_POST['maiorbio'];
