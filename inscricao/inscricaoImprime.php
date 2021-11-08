@@ -423,9 +423,9 @@ echo "<td class='label'>Período Opção 2:</td><td>" . $periodos[$a->__get('per
                         echo "<td class='label'>Matemática:</td><td> " . $a->__get('media_matematica') . " </td></tr>";
                     }
 
-                    if ($a->__get('curso') == 4 || $a->__get('curso2') == 4) {
-                        echo "<tr><td class='label'>Química:</td><td> " . $a->__get('media_quimica') . " </td>";
-                        echo "<td class='label'>Biologia:</td><td> " . $a->__get('media_biologia') . "  </td></tr>";
+                    if ($a->__get('curso') == 18) {
+                        echo "<tr><td class='label'>Ciências:</td><td> " . $a->__get('media_ciencias') . " </td>";
+                        echo "<td class='label'> </td><td>  </td></tr>";
                     }
 
                     if ($a->__get('serial') == 2) { //Apenas para o subsequente)
