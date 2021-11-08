@@ -93,7 +93,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
   }
 
   //if($a->__get('serial')==2){ //Apenas para o subsequente
- // Desativado em 05/11/2021 $a->__set('trabalha_area', @$_POST['trabalha_area']);
+  // Desativado em 05/11/2021 $a->__set('trabalha_area', @$_POST['trabalha_area']);
   //}else{
   //  $a->__set('trabalha_area','1');
   //}
@@ -353,6 +353,51 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
       }
     }
 
+    function Calc_Med_Ciencias() {
+      //document.getElementById('$portugues').value=document.getElementById('$portugues').value + 1;
+
+      var media = 0.00;
+      var serial = document.form1.serial.value;
+      var curso = document.form1.curso.value;
+
+      if (serial == 1) { //integrado
+        /*  media = (
+           parseFloat(document.form1.mat6.value) +
+           parseFloat(document.form1.mat7.value) +
+           parseFloat(document.form1.mat8.value) +
+           parseFloat(document.form1.mat9.value)) / 4;//agora so soma */
+        media = (parseFloat(document.form1.mat9.value)); //agora so soma
+      }
+
+      if (serial == 2) { //Subsequente
+        // media = (
+        // parseFloat(document.form1.mat6.value)+
+        // parseFloat(document.form1.mat7.value)+
+        // parseFloat(document.form1.mat8.value)+
+        // parseFloat(document.form1.mat9.value)+
+
+        //Se for do especialização pega media simples das materias do curso técnico
+        if (curso == 10) {
+          media = parseFloat(document.form1.mat1.value);
+        } else {
+          /*media = (
+            parseFloat(document.form1.mat1.value) +
+            parseFloat(document.form1.mat2.value) +
+            parseFloat(document.form1.mat3.value)) / 3;//Somente soma*/
+          media = (parseFloat(document.form1.mat3.value)); //Somente soma
+        }
+      }
+
+
+      if (media > 0) {
+        document.getElementById('maiormat').value = media.toFixed(2);
+      }
+    }
+
+
+
+
+
 
     function Calc_Med_Bio() {
       var media = 0.00;
@@ -445,7 +490,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     }
   </script>
 </head>
-  
+
 </head>
 
 <body onload="inicializar()">
@@ -519,7 +564,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                     <br />
                     <h2>Em qual rede de ensino cursou:</h2>
 
-                        <?php
+                    <?php
                     if ($a->__get('serial') == 1) {
                       echo '
     <label>Ensino Fundamental:</label>
@@ -631,10 +676,10 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
                     <br />
                     <?php
-                      
+
                     echo "<h2>Informe a média de suas notas de Português</h2>";
                     echo "<h4>Informe as notas em uma escala de 0 a 100.</h4>";
-                    
+
                     echo "<input type='hidden' name='cpf' value='" . $a->__get('cpf') . "' readonly/>";
                     echo "<input type='hidden' name='serial' value='" . $a->__get('serial') . "' readonly/>";
                     echo "<input type='hidden' name='curso' value='" . $a->__get('curso') . "' readonly/>";
@@ -645,27 +690,27 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                     }
 
                     ?>
-                      <br>
+                    <br>
 
-                      <div class="row">
-                        <div class="col-md-4">
-                          <label>Média em Língua Portuguesa:</label>
-                          <input class="tfield form-control_disabled form-control" maxlength="4" id="maiorport" name="maiorport" value="" type="text" required readonly="1">
-                        </div>
+                    <div class="row">
+                      <div class="col-md-4">
+                        <label>Média em Língua Portuguesa:</label>
+                        <input class="tfield form-control_disabled form-control" maxlength="4" id="maiorport" name="maiorport" value="" type="text" required readonly="1">
                       </div>
-                      <br>
-                      <br>
-                      <hr />
-                      <?php
-                      if ($a->__get('serial') == 1) {
-                        echo "<h2>Informe a média de suas notas de Matemática</h2>";
-                      } else {
-                        echo "<h2>Informe a média de suas notas de Matemática da 3ª série do Ensino Médio Regular ou a média de suas notas da 4ª série do Ensino Técnico</h2>";
-                      }
-                      ?>
-                      <h4>Informe as notas em uma escala de 0 a 100.</h4>
+                    </div>
+                    <br>
+                    <br>
+                    <hr />
                     <?php
-                    
+                    if ($a->__get('serial') == 1) {
+                      echo "<h2>Informe a média de suas notas de Matemática</h2>";
+                    } else {
+                      echo "<h2>Informe a média de suas notas de Matemática da 3ª série do Ensino Médio Regular ou a média de suas notas da 4ª série do Ensino Técnico</h2>";
+                    }
+                    ?>
+                    <h4>Informe as notas em uma escala de 0 a 100.</h4>
+                <?php
+
 
                     // echo "O serial é: ".$a->__get('serial');
                     if ($a->__get('serial') == 1) { //integrado
@@ -673,24 +718,25 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                       // echo "campos_matematica_integrado";
                     }
 
-                    ?> <div class="row">
+                ?>
+                    <div class="row">
                       <div class="col-md-4">
                         <label>Média em Matemática:</label>
                         <input class="tfield form-control_disabled form-control" maxlength="4" id="maiormat" name="maiormat" value="" type="text" required readonly="1">
                       </div>
                     </div>
                     <br>
-                    <?php
+                <?php
 
                     if ($curso == 18) {
-                    ?>
+                ?>
                       <hr />
 
                       <h2>Informe a média de suas notas de Ciências</h2>
                       <h3>Informe as notas em uma escala de 0 a 100.</h3>
-                      <?php
+                  <?php
                       campos_ciencias_integrado()
-                      ?>
+                  ?>
                       <div class="row">
                         <div class="col-md-4">
                           <label>Média em Ciências:</label>
@@ -699,11 +745,12 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                       </div>
                       <br>
                       <hr />
-                    <?php
+                  
+                  <?php
 
                     }
 
-                    ?>
+                  ?>
 
                     <div class="form-check form-check-inline">
                       <input value="1" class="form-check-input" id="concordo" required name="concordo" type="checkbox" onchange="mensagem()">
