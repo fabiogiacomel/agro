@@ -513,7 +513,7 @@ $con->execute();
             GeraLog::getInstance()->log('salvarDadosComplementares iniciando update');
 
             $sql = "update inscricoesnovas set ensinomedio=:p1, ensinofundamental=:p2,
-		renda=:p3, abandono=:p4, maiorport=:p5, maiormat=:p6,  maiorqui=:p7, maiorciencias=:pciencias, maiorbio=:p8,instituicao_formacao=:p9,
+		renda=:p3, abandono=:p4, maiorport=:p5, maiormat=:p6,  maiorqui=:p7, maiorciencias=:pk, maiorbio=:p8,instituicao_formacao=:p9,
 		trabalha_area=:pa, tipo_necessidade=:pb,bolsa_familia=:pc, comprovante_renda=:pd,
 		matematica_n1=:pe,matematica_n2=:pf,matematica_n3=:pg,matematica_n4=:ph,
 		portugues_n1=:pi,portugues_n2=:pj,portugues_n3=:pk,portugues_n4=:pl,
@@ -531,14 +531,14 @@ $con->execute();
             $con->bindValue(":p3", $this->renda); //echo $this->renda;
             $con->bindValue(":p4", $this->abandono); //echo $this->abandono;
             $con->bindValue(":p5", $this->media_portugues);
-            echo $this->media_portugues;
+            //echo $this->media_portugues;
             $con->bindValue(":p6", $this->media_matematica);
-            echo $this->media_matematica;
+            //echo $this->media_matematica;
             $con->bindValue(":p7", $this->media_quimica);
-            $con->bindValue(":pciencia", $this->media_ciencias);
-            echo $this->media_biologia;
+            $con->bindValue(":ph", $this->media_ciencias);
+            //echo $this->media_biologia;
             $con->bindValue(":p8", $this->media_biologia);
-            echo $this->media_quimica;
+            //echo $this->media_quimica;
             $con->bindValue(":p9", $this->instituicao_formacao);
             $con->bindValue(":pa", $this->trabalha_area);
             $con->bindValue(":pb", $this->tipo_necessidade);
