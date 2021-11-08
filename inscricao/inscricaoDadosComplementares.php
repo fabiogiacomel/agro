@@ -93,7 +93,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
   }
 
   //if($a->__get('serial')==2){ //Apenas para o subsequente
- // Desativado em 05/11/2021 $a->__set('trabalha_area', @$_POST['trabalha_area']);
+  // Desativado em 05/11/2021 $a->__set('trabalha_area', @$_POST['trabalha_area']);
   //}else{
   //  $a->__set('trabalha_area','1');
   //}
@@ -416,8 +416,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
           parseFloat(document.form1.port6.value) +
           parseFloat(document.form1.port7.value) +
           parseFloat(document.form1.port8.value) +
-          parseFloat(document.form1.port9.value)) / 4; 
-          //media = (parseFloat(document.form1.port9.value));
+          parseFloat(document.form1.port9.value)) / 4;
+        //media = (parseFloat(document.form1.port9.value));
       }
 
       if (serial == 2) { //Subsequente
@@ -517,25 +517,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                     <br />
                     <h2>Em qual rede de ensino cursou:</h2>
 
-                    <?php
-
-                    if ($a->__get('serial') == 2) { //Apenas para o subsequente)
-                      if ($curso == 10) {
-                        echo '<label>Ensino Técnico:</label>';
-                      } else {
-                        echo '<label>Ensino Médio:</label>';
-                      }
-
-                      echo '<select class="tfield form-control" name="ensinomedio" required onChange="">
-      <option value="0" selected="1">Selecione</option>
-      <option value="1">Integralmente em rede pública ou bolsista integral da rede particular</option>
-      <option value="2">Parcial na Rede Pública (Máximo 1 ano Rede Particular)</option>
-      <option value="3">Parcial na Rede Pública (Máximo 2 ano Rede Particular)</option>
-    </select><br />';
-                    }
-                    ?>
-
-                    <?php
+                        <?php
                     if ($a->__get('serial') == 1) {
                       echo '
     <label>Ensino Fundamental:</label>
@@ -578,19 +560,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                       <option value="2">Sim</option>
                       <!-- </select><br /> -->
                     </select> <!-- sem br -->
-                    <?php
-                    /* Código desativado em 05/11/2021
-                    if ($a->__get('serial') == 2) { //Apenas para o subsequente)
-                      echo '<h2>Trabalha na área do curso ao qual está se candidatando?</h2>
-            <label>Trabalha na área:</label>
-            <select class="tfield form-control" name="trabalha_area"  onChange="">
-              <option value="0" selected="1">Responda</option>
-              <option value="1">Não</option>
-              <option value="2">Sim (Obrigatório apresentar declaração da empresa no ato da matrícula)</option>
-            </select>
-            <br />';
-                    }*/
-                    ?>
 
                     <h2>Possui alguma Necessidade Educacional Especial?</h2>
                     <label>Necessidade Especial:</label>
@@ -660,17 +629,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
                     <br />
                     <?php
-                    if ($curso == 10) { //Especialização em enfermagem
-                    ?>
-                      <h2>Informe a média aritmética de todas as disciplinas específicas do curso Técnico em Enfermagem
-                      </h2>
-                      <h3>Informe as notas em uma escala de 0 a 100</h3>
-                      <h3>A média deve ser a soma de todas as notas das disciplinas técnicas do cuso técnico em Enfermagem
-                        divididas pela quantidade de disciplinas utilizadas na soma.</h3>
-                    <?php
-                    } else {
                       if ($a->__get('serial') == 1) {
-                        echo "<h2>Informe suas médias escolares.</h2>";
+                        echo "<h2>Informe a média de suas notas de Português</h2>";
                       } else {
                         echo "<h2>Informe a média de suas notas de Portugues da 3ª série do Ensino Médio Regular ou a média de suas notas da 4ª série do Ensino Técnico</h2>";
                       }
@@ -680,35 +640,18 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                     echo "<input type='hidden' name='cpf' value='" . $a->__get('cpf') . "' readonly/>";
                     echo "<input type='hidden' name='serial' value='" . $a->__get('serial') . "' readonly/>";
                     echo "<input type='hidden' name='curso' value='" . $a->__get('curso') . "' readonly/>";
-                    echo "<input type='hidden' name='curso2' value='" . $a->__get('curso2') . "' readonly/>";
                     ?>
                     <?php
                     if ($a->__get('serial') == 1) {
                       campos_portugues_integrado();
-                      // echo "campos portugues";
                     }
 
-                    if ($a->__get('serial') == 2) {
-                      if ($curso == 10) { //Especialização em enfermagem
-                        campos_portugues_especializacao_enfermagem();
-                        // echo "campos_portugues_especializacao_enfermagem";
-                      } else {
-                        campos_portugues_sub();
-                        // echo "campos_portugues_sub";
-                      }
-                    }
-
-                    if ($curso == 10) {
-                      echo '<input class="tfield form-control_disabled" maxlength="4" id="maiorport" name="maiorport" value="" type="hidden"  required readonly="1">';
-                    }
-
-                    if ($curso != 10) { //Se não for Especialização em enfermagem
                     ?>
                       <br>
 
                       <div class="row">
                         <div class="col-md-4">
-                          <label>Soma em Língua Portuguesa:</label>
+                          <label>Média em Língua Portuguesa:</label>
                           <input class="tfield form-control_disabled form-control" maxlength="4" id="maiorport" name="maiorport" value="" type="text" required readonly="1">
                         </div>
                       </div>
@@ -724,30 +667,24 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                       ?>
                       <h4>Informe as notas em uma escala de 0 a 100.</h4>
                     <?php
-                    }
+                    
 
                     // echo "O serial é: ".$a->__get('serial');
-                    if ($a->__get('serial') == 1 ) { //integrado
+                    if ($a->__get('serial') == 1) { //integrado
                       campos_matematica_integrado();
                       // echo "campos_matematica_integrado";
                     }
-                    if ($a->__get('serial') == 2) { //subsequente
-                      if ($curso != 10) { //Se não for Especialização em enfermagem
-                        campos_matematica_sub();
-                        // echo "campos_matematica_sub";
-                      }
-                    }
-                    
+
                     ?> <div class="row">
-                        <div class="col-md-4">
-                          <label>Média em Matemática:</label>
-                          <input class="tfield form-control_disabled form-control" maxlength="4" id="maiormat" name="maiormat" value="" type="text" required readonly="1">
-                        </div>
+                      <div class="col-md-4">
+                        <label>Média em Matemática:</label>
+                        <input class="tfield form-control_disabled form-control" maxlength="4" id="maiormat" name="maiormat" value="" type="text" required readonly="1">
                       </div>
-                      <br>
+                    </div>
+                    <br>
                     <?php
 
-                    if ($curso == 18) { 
+                    if ($curso == 18) {
                     ?>
                       <hr />
 
