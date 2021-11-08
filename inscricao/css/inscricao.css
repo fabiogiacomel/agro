@@ -1,0 +1,46 @@
+h1,h4{text-align: center; }
+
+h4{margin:0;}
+#msg{
+	position: absolute;
+	width: 800px;
+	left: 50%;
+	margin-left: -400px;
+	top : 300px;
+	background-color: #00FF66;
+	color: red;
+}
+
+input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  display: inline-block;
+  /*width:200px;*/
+  height:40px;
+  line-height: 30px;
+  margin:10px 0;
+  color: #FFF;
+  /*font-weight:bold;*/
+  font-size: 1.2em;
+  text-align: center;
+  background-color:#00B200;
+  /*background-image:url(../images/botao1.jpg);*/
+  border: none;
+	box-shadow: none;
+  /*1px solid #333333;*/
+	webkit-border-radius: 0;
+     -moz-border-radius: 0;
+          border-radius: 0;		   
+}
+
+h3{font-size: 0.9em; text-align: center;}
+.carimbo{
+  margin: solid 2px #515151;
+  text-align: justify;
+}
+table{border:none;}
+
+/*CSS para impressão*/
+@media print {
+  .hidden_print{display: none;}
+}

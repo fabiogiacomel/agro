@@ -1,0 +1,244 @@
+
+table.tablesorter thead tr .header {
+	background-image: url(css/bg.gif);
+	background-repeat: no-repeat;
+	background-position: center right;
+	cursor: pointer;
+}
+table.tablesorter thead tr .headerSortUp {
+	background-image: url(css/asc.gif);
+}
+table.tablesorter thead tr .headerSortDown {
+	background-image: url(css/desc.gif);
+}
+
+html{padding-top: 5px;}
+body{font-family: 'Droid Sans', sans-serif; font-size: 16px; line-height: 1.5em; margin-top: 3px;}
+p{color:white;text-align: justify;}
+
+
+div input{margin: 5px -19px;}
+td p{color:#515151;}
+a{color:#515151;}
+
+.inset {
+   -moz-box-shadow: inset 0 6px 8px rgba(0,0,0,.4);
+   -webkit-box-shadow: inset 0 6px 8px rgba(0,0,0,.4);
+   box-shadow: inset 0 6px 8px rgba(0,0,0,.4);
+}
+
+label{
+  color: #000;
+  background-color: #CCC;
+  display: inline-block;
+  width: 30%;
+  height: 20px;
+  padding: 5px;
+  padding-left: 15px;
+  margin:5px;
+  margin-left:0;
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 20px;
+  text-align: left;
+  border: 1px solid #666;
+  vertical-align: top;
+  -webkit-border-radius: 4px  0 0 4px;
+     -moz-border-radius: 4px  0 0 4px;
+          border-radius: 4px  0 0 4px; 
+}
+
+.cem_porcento{width:100%;}
+
+input, select, textarea{
+  width:67%;	
+  color: #333;
+  background-color: #FFF;
+  
+  /*height: 25px;*/
+  padding: 5px;
+  margin: 5px -30px;
+  border: 1px solid #666;
+  display: inline-block;
+  font-size: 12px;
+  font-weight: normal;
+  line-height: 20px;
+
+  -webkit-border-radius: 0 4px 4px 0;
+     -moz-border-radius: 0 4px 4px 0;
+          border-radius: 0 4px 4px 0; 
+}
+
+#form input[type="file"]{margin:5px -16px;}
+
+#form input[type="checkbox"]{width:auto;margin:5px;}
+
+textarea{height:60px;}
+
+select {
+	width:68.5%;
+	height:32px;
+	line-height:32px;
+	margin-left: -30px;
+	}
+	
+
+
+#form input[type="button"],
+#form input[type="reset"],
+#form input[type="submit"] {
+  display: inline-block;
+  width:200px;
+  height:40px;
+  line-height: 30px;
+  margin:10px 0;
+  color: #FFF;
+  /*font-weight:bold;*/
+  font-size: 0.6em;
+  text-align: center;
+  background-color:#00B200;
+  /*background-image:url(../images/botao1.jpg);*/
+  border: none;
+	box-shadow: none;
+  /*1px solid #333333;*/
+	webkit-border-radius: 0;
+     -moz-border-radius: 0;
+          border-radius: 0;		   
+}
+
+table{
+	width: 100%;
+}	
+#form{
+	position:relative;
+	width:800px;
+	/*background-color:#3D4447;*/
+	border:#FFF solid 5px;
+	left:50%;
+	/*top:130px;*/
+	padding:30px;
+	padding-top: 20px;
+	margin-left:-435px;
+	font-family:"Courier New", Courier, monospace,"Book Antiqua", Palatino, serif;
+	font-size:22px;
+	/*border-radius:20px;
+	-moz-border-radius:20px;
+	-webkit-border-radius:20px;*/
+	box-shadow:1px 1px 3px 2px #666;
+  /*-moz-box-shadow:3px 4px 3px 4px #000;
+	-webkit-box-shadow:4px 4px 3px 4px #000;*/	
+}	
+	
+.MSG_ERRO,.MSG_SUCCESS{	
+	width:100%;
+	text-align:center;
+	/*height:35px;*/
+	line-height:35px;
+	z-index:999;
+	font-family:Arial, Gadget, sans-serif;
+	color:#FFF;
+	font-size:18px;
+	
+	margin:0;
+	border-radius:10px;
+	border:#999 dotted 2px;
+	margin-bottom:0px;	
+	background-color:#FF9;
+}
+
+.obrigatorio{font-weight:bold;}
+
+#form h1,#form h2,#form h3,#form h4,#form h5{
+	font-family:"Courier New", Courier, monospace;
+	color:#515253;
+	font-size:20px;
+	text-align:center;
+	margin-bottom: 0;
+	border-radius:10px;
+	border:#999 dotted 2px;
+	
+	margin-bottom:0px;
+	
+	}
+	
+#form h2{margin-top:5px;}	/*Mensagens de sucesso!*/
+#form h3{font-size:16px;}	
+	
+/*h5 Aviso de campos * Obrigatório/*/	
+#form h5{font-size:16px; border-radius:10px;margin:0;margin-top:-20px; padding:5px; text-align:left;}	
+	
+.MSG_ERRO{
+	background-color:#F66;
+	color:#900;
+	/*overflow:hidden;	*/
+	z-index: 999;
+	}	
+
+
+.MSG_SUCCESS{
+	background-color:#0C6;
+	color:#030;
+	/*overflow:hidden;*/
+	}
+	
+.MSG_AVISO{
+	background-color:#FC0;
+	color:#030;
+	border-radius:10px;
+	border:#999 dotted 2px;
+	text-align:center;
+	/*overflow:hidden;*/
+	}	
+	
+.table{
+	
+	width:100%;
+	background-color:#3D4447;
+	/*border:#FFF solid 5px;*/
+	/*border-collapse:collapse;font-size:12px;*/
+	/*padding:10px;*/
+	color: white;
+	font-family:"Courier New", Courier, monospace,"Book Antiqua", Palatino, serif;
+	
+	font-weight: bold;
+	
+	}
+	
+table th{ 
+background-color:#999999;
+font-size:16px;
+height:35px;
+color:#333;
+}
+table td{color:#333; padding-left: 10px;}
+
+table tr.normal{ background-color:#FFF;
+font-size:14px;
+height:30px;
+
+}	
+table tr.diferente{ background-color:#FF9;
+font-size:14px;
+height:30px;
+
+}	
+
+
+:invalid{
+	/*background-color:#FCF;*/
+	/*border: #FFF solid 2px;*/
+	box-shadow:#C93D80 0 0 5px;
+	}
+:valid{
+	/*background-color:#CFF;
+	border: #FFF solid 2px;*/
+	box-shadow:#87C826 0 0 5px;
+	}
+input[type="radio"]:valid{box-shadow: none; margin-top:10px;}
+
+.aviso{
+
+	font-family: 'Droid Sans', sans-serif; font-size: 16px; line-height: 1.5em;
+}
+
+#aviso{display: none;}
