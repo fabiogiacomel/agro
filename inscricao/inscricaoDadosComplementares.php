@@ -62,24 +62,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $a->__set('portugues_n4', $_POST['port9']);
   }
 
-  if ($a->__get('serial') == 2) { //Apenas para o subsequente)
-    $a->__set('matematica_n1', $_POST['mat1']);
-    $a->__set('matematica_n2', $_POST['mat2']);
-    $a->__set('matematica_n3', $_POST['mat3']);
-
-    $a->__set('portugues_n1', $_POST['pot1']);
-    $a->__set('portugues_n2', $_POST['pot2']);
-    $a->__set('portugues_n3', $_POST['pot3']);
-
-    if ($curso == 4 || $curso2 == 4) { //Enfermagem
-      $a->__set('quimica_n1', $_POST['qui1']);
-      $a->__set('quimica_n2', $_POST['qui2']);
-      $a->__set('quimica_n3', $_POST['qui3']);
-
-      $a->__set('biologia_n1', $_POST['bio1']);
-      $a->__set('biologia_n2', $_POST['bio2']);
-      $a->__set('biologia_n3', $_POST['bio3']);
-    }
   }
 
   //}
@@ -143,27 +125,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     //   });
     // });
 
-    function mensagem() {
-
-      // var curso  = document.form1.curso.value;
-
-      // if (curso==1 || curso==5){
-      //     alert('Palestra esclarecedora sobre currículo e perfil profissional no dia 09/11/2017. Para os cursos de Administração e Informática');
-      // }
-      // if (curso==2 || curso==3){
-      //   alert('Palestra esclarecedora sobre currículo e perfil profissional no dia 10/11/2017. Para os cursos de Eletromecânica e Eletrônica');
-      // }
-
-      // if (curso==6 || curso==9){
-      //     alert('Palestra esclarecedora sobre currículo e perfil profissional no dia 11/11/2017. Para os cursos de Edificações e Meio Ambiente');
-      // }
-
-      // if (curso==4 || curso==7){
-      //     alert('Palestra esclarecedora sobre currículo e perfil profissional no dia 12/11/2017. Para os cursos de Enfermagem e Segurança do Trabalho');
-      // }
-
-      //alert('A abertura de turmas e a efetivação da matrícula, estão vinculadas ao número de 35 (trinta e cinco) interessados ao final deste processo classificador (conforme Resolução n° 4527/2011 - GS/SEED).');
-    }
   </script>
   <style>
     /*label{width: 150px; display: inline-block;}*/
@@ -194,11 +155,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
 
   <script type="text/javascript">
-    function validar2() {
-      alert('1');
-      return false;
-
-    }
 
     function inicializar() {
       document.getElementById('tipo_necessidade').style.display = 'none';
@@ -631,7 +587,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                     <?php
                       
                     echo "<h2>Informe a média de suas notas de Português</h2>";
-                    echo "<h2>Informe a média de suas notas de Portugues da 3ª série do Ensino Médio Regular ou a média de suas notas da 4ª série do Ensino Técnico</h2>";
                     echo "<h4>Informe as notas em uma escala de 0 a 100.</h4>";
                     
                     echo "<input type='hidden' name='cpf' value='" . $a->__get('cpf') . "' readonly/>";
