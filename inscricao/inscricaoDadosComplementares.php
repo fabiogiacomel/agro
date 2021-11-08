@@ -670,7 +670,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                     <?php
                     } else {
                       if ($a->__get('serial') == 1) {
-                        echo "<h2>Informe a média de suas notas de Português no 9° ano</h2>";
+                        echo "<h2>Informe suas médias escolares.</h2>";
                       } else {
                         echo "<h2>Informe a média de suas notas de Portugues da 3ª série do Ensino Médio Regular ou a média de suas notas da 4ª série do Ensino Técnico</h2>";
                       }
@@ -717,7 +717,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                       <hr />
                       <?php
                       if ($a->__get('serial') == 1) {
-                        echo "<h2>Informe a média de suas notas de Matemática no 9° ano</h2>";
+                        echo "<h2>Informe a média de suas notas de Matemática</h2>";
                       } else {
                         echo "<h2>Informe a média de suas notas de Matemática da 3ª série do Ensino Médio Regular ou a média de suas notas da 4ª série do Ensino Técnico</h2>";
                       }
@@ -817,20 +817,20 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 function campos_matematica_integrado()
 {
   echo '<div class="row">
-            <!--<div class="col-md-3">
-              <label>5a Série / 6° Ano..:</label>
+            <div class="col-md-3">
+              <label>6° Ano</label>
               <input type="text" placeholder="Exemplo: 60" class="tfield form-control  nota" maxlength="3" pattern="[0-9]{2}|[1][0]{2}" title="Informe a nota com 2 dígitos de 00 a 100"  onChange="Calc_Med_Mt()" id="virtmat6" name="mat6" value="" type="text" OnKeyPress="">
             </div>
             <div class="col-md-3">
-              <label>6a Série / 7° Ano..:</label>
+              <label>7° Ano</label>
               <input type="text" placeholder="Exemplo: 60" class="tfield form-control  nota" maxlength="3" pattern="[0-9]{2}|[1][0]{2}" title="Informe a nota com 2 dígitos de 00 a 100"  onChange="Calc_Med_Mt()" id="virtmat7" name="mat7" value="" type="text" OnKeyPress="">
             </div>
             <div class="col-md-3">
-              <label>7a Série / 8° Ano..:</label>
+              <label>8° Ano</label>
               <input type="text" placeholder="Exemplo: 60" class="tfield form-control  nota" maxlength="3" pattern="[0-9]{2}|[1][0]{2}" title="Informe a nota com 2 dígitos de 00 a 100"  onChange="Calc_Med_Mt()" id="virtmat8" name="mat8" value="" type="text" OnKeyPress="">
-            </div>-->
+            </div>
             <div class="col-md-3">
-              <label>Informe a média das notas de Matemática do 9° Ano:</label>
+              <label>9° Ano</label>
               <input type="text" placeholder="Exemplo: 60" class="tfield form-control  nota" maxlength="3" pattern="[0-9]{2}|[1][0]{2}" title="Informe a nota com 2 dígitos de 00 a 100"  onChange="Calc_Med_Mt()" id="virtmat0" name="mat9" value="" type="text" OnKeyPress="">
             </div>
           </div>';
@@ -840,19 +840,19 @@ function campos_portugues_integrado()
 {
   echo '<div class="row">
             <div class="col-md-3">
-              <label> 6° Ano..:</label>
+              <label> 6° Ano</label>
               <input type="text" placeholder="Exemplo: 60" class="tfield form-control  nota" maxlength="3" pattern="[0-9]{2}|[1][0]{2}" title="Informe a nota com 2 dígitos de 00 a 100" onChange="Calc_Med_Pt()" id="virtport6" name="port6" value="" type="text" OnKeyPress="">
             </div>
             <div class="col-md-3">
-              <label> 7° Ano..:</label>
+              <label> 7° Ano</label>
               <input type="text" placeholder="Exemplo: 60" class="tfield form-control  nota" maxlength="3" pattern="[0-9]{2}|[1][0]{2}" title="Informe a nota com 2 dígitos de 00 a 100" onChange="Calc_Med_Pt()" id="virtport7" name="port7" value="" type="text" OnKeyPress="">
             </div>
             <div class="col-md-3">
-              <label> 8° Ano..:</label>
+              <label> 8° Ano</label>
               <input type="text" placeholder="Exemplo: 60" class="tfield form-control  nota" maxlength="3" pattern="[0-9]{2}|[1][0]{2}" title="Informe a nota com 2 dígitos de 00 a 100" onChange="Calc_Med_Pt()" id="virtport8" name="port8" value="" type="text" OnKeyPress="">
             </div>
             <div class="col-md-3">
-              <label> 9° Ano:</label>
+              <label> 9° Ano</label>
               <input type="text" placeholder="Exemplo: 60" class="tfield form-control  nota" maxlength="3" pattern="[0-9]{2}|[1][0]{2}" title="Informe a nota com 2 dígitos de 00 a 100" onChange="Calc_Med_Pt()" id="virtport0" name="port9" value="" type="text" OnKeyPress="">
             </div>
           </div>';
@@ -862,18 +862,32 @@ function campos_matematica_especializacao_enfermagem()
 {
 }
 
-function campos_portugues_especializacao_enfermagem()
+function campos_ciencias_integrado()
 {
-  echo '<label class="">Média aritmética:</label>
-              <input type="text" placeholder="Exemplo: 60" class="tfield form-control  nota" maxlength="3" pattern="[0-9]{2}|[1][0]{2}" title="Informe a nota com 2 dígitos de 00 a 100" onChange="Calc_Med_Pt()" id="virtport1" name="port1" value="" type="text" OnKeyPress="">
-
-              <br />';
+  echo '<div class="row">
+            <div class="col-md-3">
+              <label> 6° Ano</label>
+              <input type="text" placeholder="Exemplo: 60" class="tfield form-control  nota" maxlength="3" pattern="[0-9]{2}|[1][0]{2}" title="Informe a nota com 2 dígitos de 00 a 100" onChange="Calc_Med_Ciencias()" id="virtciencias6" name="ciencias6" value="" type="text" OnKeyPress="">
+            </div>
+            <div class="col-md-3">
+              <label> 7° Ano</label>
+              <input type="text" placeholder="Exemplo: 60" class="tfield form-control  nota" maxlength="3" pattern="[0-9]{2}|[1][0]{2}" title="Informe a nota com 2 dígitos de 00 a 100" onChange="Calc_Med_Ciencias()" id="virtciencias7" name="ciencias7" value="" type="text" OnKeyPress="">
+            </div>
+            <div class="col-md-3">
+              <label> 8° Ano</label>
+              <input type="text" placeholder="Exemplo: 60" class="tfield form-control  nota" maxlength="3" pattern="[0-9]{2}|[1][0]{2}" title="Informe a nota com 2 dígitos de 00 a 100" onChange="Calc_Med_Ciencias()" id="virtciencias8" name="ciencias8" value="" type="text" OnKeyPress="">
+            </div>
+            <div class="col-md-3">
+              <label> 9° Ano</label>
+              <input type="text" placeholder="Exemplo: 60" class="tfield form-control  nota" maxlength="3" pattern="[0-9]{2}|[1][0]{2}" title="Informe a nota com 2 dígitos de 00 a 100" onChange="Calc_Med_Ciencias()" id="virtciencias9" name="ciencias9" value="" type="text" OnKeyPress="">
+            </div>
+          </div>';
 }
 
 function campos_quimica_sub()
 {
   echo '<div class="row">
-            <!--<div class="col-md-4">
+            <div class="col-md-4">
               <label class="" col-md-4">1° Ano.:</label>
               <input type="text" placeholder="Exemplo: 60" class="tfield form-control  nota" maxlength="3" pattern="[0-9]{2}|[1][0]{2}" title="Informe a nota com 2 dígitos de 00 a 100"  onChange="Calc_Med_Qui()" id="virtqui" name="qui1" value="" type="text" OnKeyPress="">
             </div>
@@ -881,7 +895,6 @@ function campos_quimica_sub()
               <label class="" col-md-4">2° Ano.:</label>
               <input type="text" placeholder="Exemplo: 60" class="tfield form-control  nota" maxlength="3" pattern="[0-9]{2}|[1][0]{2}" title="Informe a nota com 2 dígitos de 00 a 100"  onChange="Calc_Med_Qui()" id="virtqui2" name="qui2" value="" type="text" OnKeyPress="">
             </div>
-            -->
             <div class="col-md-4">
               <label class="" col-md-4">Informe a média das notas em Química do 3° ou 4° Ano:</label>
               <input type="text" placeholder="Exemplo: 60" class="tfield form-control  nota" maxlength="3" pattern="[0-9]{2}|[1][0]{2}" title="Informe a nota com 2 dígitos de 00 a 100"  onChange="Calc_Med_Qui()" id="virtqui3" name="qui3" value="" type="text" OnKeyPress="">
