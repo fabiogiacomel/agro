@@ -293,7 +293,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         // document.form1.mat6.focus;
         return false;
       }
-
       if (isNaN(parseFloat(document.getElementById('maiorport').value)) ||
         (parseFloat(document.getElementById('maiorport').value) < 50)) {
 
@@ -728,8 +727,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                     }
 
                     // echo "O serial é: ".$a->__get('serial');
-                    //if ($a->__get('serial') == 1 && ($curso <> 17) && ($curso <> 18)) { //integrado
-                      if ($a->__get('serial') == 1){ 
+                    if ($a->__get('serial') == 1 && ($curso <> 17) && ($curso <> 18)) { //integrado
                       campos_matematica_integrado();
                       // echo "campos_matematica_integrado";
                     }
@@ -755,7 +753,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                     ?>
                       <hr />
 
-                      <h2>Informe a média de suas notas de Química na 3ª serie ou na 4ª serie em caso de curso integrado (Técnico)</h2>
+                      <h2>Informe a média de suas notas de Química no 3° ano ou no 4° ano em caso de curso integrado (Técnico)</h2>
                       <h3>Informe as notas em uma escala de 0 a 100.</h3>
                       <?php
                       campos_quimica_sub();
@@ -768,7 +766,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                       </div>
                       <br>
                       <hr />
-                      <h2>Informe a média de suas notas de Biologia na 3ª serie ou na 4ª serie em caso de curso integrado (Técnico)</h2>
+                      <h2>Informe a média de suas notas de Biologia no 3° ano ou no 4° ano em caso de curso integrado (Técnico)</h2>
                       <h3>Informe as notas em uma escala de 0 a 100.</h3>
                       <?php
                       campos_biologia_sub();
@@ -885,7 +883,7 @@ function campos_quimica_sub()
             </div>
             -->
             <div class="col-md-4">
-              <label class="" col-md-4">Informe a média das notas em Química do 3ª ou 4ª Serie:</label>
+              <label class="" col-md-4">Informe a média das notas em Química do 3° ou 4° Ano:</label>
               <input type="text" placeholder="Exemplo: 60" class="tfield form-control  nota" maxlength="3" pattern="[0-9]{2}|[1][0]{2}" title="Informe a nota com 2 dígitos de 00 a 100"  onChange="Calc_Med_Qui()" id="virtqui3" name="qui3" value="" type="text" OnKeyPress="">
             </div>
           </div>';
@@ -905,7 +903,7 @@ function campos_biologia_sub()
 
             -->
             <div class="col-md-4"> 
-              <label class="" col-md-4">Informe a média das notas em Biologia do 3ª ou 4ª Serie::</label>
+              <label class="" col-md-4">Informe a média das notas em Biologia do 3° ou 4° Ano::</label>
               <input type="text" placeholder="Exemplo: 60" class="tfield form-control  nota" maxlength="3" pattern="[0-9]{2}|[1][0]{2}" title="Informe a nota com 2 dígitos de 00 a 100"  onChange="Calc_Med_Bio()" id="virtbio3" name="bio3" value="" type="text" OnKeyPress="">
             </div>
           </div>';
@@ -924,7 +922,7 @@ function campos_matematica_sub()
             </div>
             -->
             <div class="col-md-4">
-              <label class="">Informe a média das notas em Matemática do 3ª ou 4ª Serie:</label>
+              <label class="">Informe a média das notas em Matemática do 3° ou 4° Ano:</label>
               <input type="text" placeholder="Exemplo: 60" class="tfield form-control  nota" maxlength="3" pattern="[0-9]{2}|[1][0]{2}" title="Informe a nota com 2 dígitos de 00 a 100"  onChange="Calc_Med_Mt()" id="virtmat3" name="mat3" value="" type="text" OnKeyPress="">
             </div>
           </div>';
@@ -942,7 +940,7 @@ function campos_portugues_sub()
             </div>
             -->
             <div class="col-md-4">
-              <label class="">Informe a média das notas em Português do 3ª ou 4ª Serie:</label>
+              <label class="">Informe a média das notas em Português do 3° ou 4° Ano:</label>
               <input type="text" placeholder="Exemplo: 60" class="tfield form-control  nota" maxlength="3" pattern="[0-9]{2}|[1][0]{2}" title="Informe a nota de 50 a 100" onChange="Calc_Med_Pt()" id="virtport3" name="port3" value="" type="text" OnKeyPress="">
             </div>
           </div>';

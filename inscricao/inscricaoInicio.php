@@ -217,29 +217,32 @@ if (strtotime($data1) > strtotime($data2)) {
       if (serial == 1 && periodo == 1) {
         document.getElementById('curso').length = 0;
         //document.getElementById('curso').options.add(new Option("Nenhum curso para esta Modalidade e Período", "0"));
-        document.getElementById('curso').options.length = 0;
+        // document.getElementById('curso').options.length = 0;
         document.getElementById('curso').options.add(new Option("Selecione um curso", "0"));
-        document.getElementById('curso').options.add(new Option("Administração  ", "1"));
-        document.getElementById('curso').options.add(new Option("Edificações  ", "9"));
-        document.getElementById('curso').options.add(new Option("Eletrônica  ", "2"));
-        document.getElementById('curso').options.add(new Option("Eletromecânica  ", "3"));
-        document.getElementById('curso').options.add(new Option("Desenvolvimento de Sistemas  ", "19"));
-        document.getElementById('curso').options.add(new Option("Meio Ambiente  ", "6"));
-        //document.getElementById('curso').options.add(new Option("TÉCNICO EM AGRONEGÓCIOS  ", "17"));
-        //document.getElementById('curso').options.add(new Option("TÉCNICO AGRÍCOLA  ", "18"));
+        // document.getElementById('curso').options.add(new Option("Administração  ", "1"));
+        // document.getElementById('curso').options.add(new Option("Edificações  ", "9"));
+        // document.getElementById('curso').options.add(new Option("Eletrônica  ", "2"));
+        // document.getElementById('curso').options.add(new Option("Eletromecânica  ", "3"));
+        // document.getElementById('curso').options.add(new Option("Desenvolvimento de Sistemas  ", "19"));
+        // document.getElementById('curso').options.add(new Option("Meio Ambiente  ", "6"));
+        document.getElementById('curso').options.add(new Option("TÉCNICO EM AGRONEGÓCIOS  ", "17"));
+        document.getElementById('curso').options.add(new Option("TÉCNICO AGRÍCOLA  ", "18"));
       }
 
       //Integrado tarde
       if (serial == 1 && periodo == 2) {
-        document.getElementById('curso').length = 0;
-        document.getElementById('curso').options.length = 0;
-        document.getElementById('curso').options.add(new Option("Selecione um curso", "0"));
-        document.getElementById('curso').options.add(new Option("Administração  ", "1"));
-        document.getElementById('curso').options.add(new Option("Edificações  ", "9"));
-        document.getElementById('curso').options.add(new Option("Eletrônica  ", "2"));
-        document.getElementById('curso').options.add(new Option("Eletromecânica  ", "3"));
-        document.getElementById('curso').options.add(new Option("Desenvolvimento de Sistemas  ", "19"));
-        document.getElementById('curso').options.add(new Option("Meio Ambiente  ", "6"));
+        // document.getElementById('curso').length = 0;
+        // document.getElementById('curso').options.length = 0;
+        // document.getElementById('curso').options.add(new Option("Selecione um curso", "0"));
+        // document.getElementById('curso').options.add(new Option("Administração  ", "1"));
+        // document.getElementById('curso').options.add(new Option("Edificações  ", "9"));
+        // document.getElementById('curso').options.add(new Option("Eletrônica  ", "2"));
+        // document.getElementById('curso').options.add(new Option("Eletromecânica  ", "3"));
+        // document.getElementById('curso').options.add(new Option("Desenvolvimento de Sistemas  ", "19"));
+        // document.getElementById('curso').options.add(new Option("Meio Ambiente  ", "6"));
+        document.getElementById('curso').options.add(new Option("TÉCNICO EM AGRONEGÓCIOS  ", "17"));
+        document.getElementById('curso').options.add(new Option("TÉCNICO AGRÍCOLA  ", "18"));
+
       }
 
 
@@ -254,9 +257,9 @@ if (strtotime($data1) > strtotime($data2)) {
       if (serial == 2 && periodo == 1) {
         document.getElementById('curso').length = 0;
         document.getElementById('curso').options.length = 0;
-        //document.getElementById('curso').options.add(new Option("Nenhum curso para esta Modalidade e Período", "0"));
-        document.getElementById('curso').options.add(new Option("Selecione um curso", "0"));
-        document.getElementById('curso').options.add(new Option("Enfermagem", "4"));
+        document.getElementById('curso').options.add(new Option("Nenhum curso para esta Modalidade e Período", "0"));
+        //document.getElementById('curso').options.add(new Option("Selecione um curso", "0"));
+        //document.getElementById('curso').options.add(new Option("Enfermagem", "4"));
         // document.getElementById('curso').options.add(new Option("Nenhum curso para esta Modalidade e Período", "0"));
 
       }
@@ -280,16 +283,16 @@ if (strtotime($data1) > strtotime($data2)) {
         document.getElementById('curso').options.length = 0;
         /*     document.getElementById('curso').options.add(new Option("Nenhum curso para esta Modalidade e Período", "0"));
          */
-        document.getElementById('curso').options.add(new Option("Selecione um curso", "0"));
-        document.getElementById('curso').options.add(new Option("Administração", "1"));
-        document.getElementById('curso').options.add(new Option("Edificações", "9"));
+        //document.getElementById('curso').options.add(new Option("Selecione um curso", "0"));
+        //document.getElementById('curso').options.add(new Option("Administração", "1"));
+        //document.getElementById('curso').options.add(new Option("Edificações", "9"));
         //document.getElementById('curso').options.add(new Option("Eletrônica", "2"));
-        document.getElementById('curso').options.add(new Option("Eletromecânica", "3"));
-        document.getElementById('curso').options.add(new Option("Enfermagem", "4"));
+        //document.getElementById('curso').options.add(new Option("Eletromecânica", "3"));
+        //document.getElementById('curso').options.add(new Option("Enfermagem", "4"));
         // document.getElementById('curso').options.add(new Option("Especialização Técnica em Enfermagem do Trabalho", "10"));
         //document.getElementById('curso').options.add(new Option("Informática", "5"));
         //document.getElementById('curso').options.add(new Option("Meio Ambiente", "6"));
-        document.getElementById('curso').options.add(new Option("Segurança do Trabalho", "7"));
+        //document.getElementById('curso').options.add(new Option("Segurança do Trabalho", "7"));
         //document.getElementById('curso').options.add(new Option("Móveis", "11"));
       }
     }
@@ -372,17 +375,19 @@ if (strtotime($data1) > strtotime($data2)) {
         document.getElementById('curso2').options.length = 0;
         /*     document.getElementById('curso').options.add(new Option("Nenhum curso para esta Modalidade e Período", "0"));
          */
-        document.getElementById('curso2').options.add(new Option("Selecione um curso", "0"));
-        document.getElementById('curso2').options.add(new Option("Administração", "1"));
-        document.getElementById('curso2').options.add(new Option("Edificações", "9"));
-        //document.getElementById('curso2').options.add(new Option("Eletrônica", "2"));
-        document.getElementById('curso2').options.add(new Option("Eletromecânica", "3"));
-        document.getElementById('curso2').options.add(new Option("Enfermagem", "4"));
-        // document.getElementById('curso').options.add(new Option("Especialização Técnica em Enfermagem do Trabalho", "10"));
-        //document.getElementById('curso2').options.add(new Option("Informática", "5"));
-        //document.getElementById('curso2').options.add(new Option("Meio Ambiente", "6"));
-        document.getElementById('curso2').options.add(new Option("Segurança do Trabalho", "7"));
-        //document.getElementById('curso').options.add(new Option("Móveis", "11"));
+        document.getElementById('curso2').options.add(new Option("Nenhum curso para esta Modalidade e Período", "0"));
+
+        //  document.getElementById('curso2').options.add(new Option("Selecione um curso", "0"));
+        // document.getElementById('curso2').options.add(new Option("Administração", "1"));
+        // document.getElementById('curso2').options.add(new Option("Edificações", "9"));
+        // //document.getElementById('curso2').options.add(new Option("Eletrônica", "2"));
+        // document.getElementById('curso2').options.add(new Option("Eletromecânica", "3"));
+        // document.getElementById('curso2').options.add(new Option("Enfermagem", "4"));
+        // // document.getElementById('curso').options.add(new Option("Especialização Técnica em Enfermagem do Trabalho", "10"));
+        // //document.getElementById('curso2').options.add(new Option("Informática", "5"));
+        // //document.getElementById('curso2').options.add(new Option("Meio Ambiente", "6"));
+        // document.getElementById('curso2').options.add(new Option("Segurança do Trabalho", "7"));
+        // //document.getElementById('curso').options.add(new Option("Móveis", "11"));
       }
     }
   </script>
@@ -437,9 +442,9 @@ if (strtotime($data1) > strtotime($data2)) {
                       </br>
                       <label> <p> Modalidade:</p></label>
                     <select name="serial" onChange="valida_curso();valida_curso2();" class="form-control" required>
-                      <option value="0" selected="1">Selecione uma opção</option> 
+                      <option value="1" selected="1">Selecione uma opção</option> 
                       <option value="1">Integrado</option>
-                      <option value="2">Subsequente</option> 
+                      <!--<option value="2">Subsequente</option> -->
                     </select>
                   </div>
                 </div>
@@ -453,7 +458,7 @@ if (strtotime($data1) > strtotime($data2)) {
                         <option value="0" selected="1">Selecione um Período</option>
                         <option value="1">Matutino</option> 
                         <option value="2">Vespertino</option>
-                        <option value="3">Noturno</option> 
+                        <!--<option value="3">Noturno</option> --> 
                       </select>
                     </div>
                   </div>
