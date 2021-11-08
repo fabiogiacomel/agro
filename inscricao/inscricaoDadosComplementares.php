@@ -858,10 +858,6 @@ function campos_portugues_integrado()
           </div>';
 }
 
-function campos_matematica_especializacao_enfermagem()
-{
-}
-
 function campos_ciencias_integrado()
 {
   echo '<div class="row">
@@ -880,81 +876,6 @@ function campos_ciencias_integrado()
             <div class="col-md-3">
               <label> 9° Ano</label>
               <input type="text" placeholder="Exemplo: 60" class="tfield form-control  nota" maxlength="3" pattern="[0-9]{2}|[1][0]{2}" title="Informe a nota com 2 dígitos de 00 a 100" onChange="Calc_Med_Ciencias()" id="virtciencias9" name="ciencias9" value="" type="text" OnKeyPress="">
-            </div>
-          </div>';
-}
-
-function campos_quimica_sub()
-{
-  echo '<div class="row">
-            <div class="col-md-4">
-              <label class="" col-md-4">1° Ano.:</label>
-              <input type="text" placeholder="Exemplo: 60" class="tfield form-control  nota" maxlength="3" pattern="[0-9]{2}|[1][0]{2}" title="Informe a nota com 2 dígitos de 00 a 100"  onChange="Calc_Med_Qui()" id="virtqui" name="qui1" value="" type="text" OnKeyPress="">
-            </div>
-            <div class="col-md-4">
-              <label class="" col-md-4">2° Ano.:</label>
-              <input type="text" placeholder="Exemplo: 60" class="tfield form-control  nota" maxlength="3" pattern="[0-9]{2}|[1][0]{2}" title="Informe a nota com 2 dígitos de 00 a 100"  onChange="Calc_Med_Qui()" id="virtqui2" name="qui2" value="" type="text" OnKeyPress="">
-            </div>
-            <div class="col-md-4">
-              <label class="" col-md-4">Informe a média das notas em Química do 3° ou 4° Ano:</label>
-              <input type="text" placeholder="Exemplo: 60" class="tfield form-control  nota" maxlength="3" pattern="[0-9]{2}|[1][0]{2}" title="Informe a nota com 2 dígitos de 00 a 100"  onChange="Calc_Med_Qui()" id="virtqui3" name="qui3" value="" type="text" OnKeyPress="">
-            </div>
-          </div>';
-}
-
-function campos_biologia_sub()
-{
-  echo '<div class="row">
-            <!--<div class="col-md-4">
-              <label class="" col-md-4">1° Ano.:</label>
-              <input type="text" placeholder="Exemplo: 60" class="tfield form-control  nota" maxlength="3" pattern="[0-9]{2}|[1][0]{2}" title="Informe a nota com 2 dígitos de 00 a 100"  onChange="Calc_Med_Bio()" id="virtbio" name="bio1" value="" type="text" OnKeyPress="">
-            </div>
-            <div class="col-md-4">  
-              <label class="" col-md-4">2° Ano.:</label>
-              <input type="text" placeholder="Exemplo: 60" class="tfield form-control  nota" maxlength="3" pattern="[0-9]{2}|[1][0]{2}" title="Informe a nota com 2 dígitos de 00 a 100"  onChange="Calc_Med_Bio()" id="virtbio2" name="bio2" value="" type="text" OnKeyPress="">
-            </div>
-
-            -->
-            <div class="col-md-4"> 
-              <label class="" col-md-4">Informe a média das notas em Biologia do 3° ou 4° Ano::</label>
-              <input type="text" placeholder="Exemplo: 60" class="tfield form-control  nota" maxlength="3" pattern="[0-9]{2}|[1][0]{2}" title="Informe a nota com 2 dígitos de 00 a 100"  onChange="Calc_Med_Bio()" id="virtbio3" name="bio3" value="" type="text" OnKeyPress="">
-            </div>
-          </div>';
-}
-
-function campos_matematica_sub()
-{
-  echo '<div class="row">
-            <!--<div class="col-md-4">
-              <label class="">1° Ano.:</label>
-              <input type="text" placeholder="Exemplo: 60" class="tfield form-control  nota" maxlength="3" pattern="[0-9]{2}|[1][0]{2}" title="Informe a nota com 2 dígitos de 00 a 100"  onChange="Calc_Med_Mt()" id="virtmat1" name="mat1" value="" type="text" OnKeyPress="">
-            </div>
-            <div class="col-md-4">
-              <label class="">2° Ano.:</label>
-              <input type="text" placeholder="Exemplo: 60" class="tfield form-control  nota" maxlength="3" pattern="[0-9]{2}|[1][0]{2}" title="Informe a nota com 2 dígitos de 00 a 100"  onChange="Calc_Med_Mt()" id="virtmat2" name="mat2" value="" type="text" OnKeyPress="">
-            </div>
-            -->
-            <div class="col-md-4">
-              <label class="">Informe a média das notas em Matemática do 3° ou 4° Ano:</label>
-              <input type="text" placeholder="Exemplo: 60" class="tfield form-control  nota" maxlength="3" pattern="[0-9]{2}|[1][0]{2}" title="Informe a nota com 2 dígitos de 00 a 100"  onChange="Calc_Med_Mt()" id="virtmat3" name="mat3" value="" type="text" OnKeyPress="">
-            </div>
-          </div>';
-}
-function campos_portugues_sub()
-{
-  echo '<div class="row">
-           <!-- <div class="col-md-4">
-              <label class="">1° Ano.:</label>
-              <input type="text" placeholder="Exemplo: 60" class="tfield form-control  nota" maxlength="3" pattern="[0-9]{2}|[1][0]{2}" title="Informe a nota com 2 dígitos de 00 a 100" onChange="Calc_Med_Pt()" id="virtport1" name="port1" value="" type="text" OnKeyPress="">
-            </div>
-            <div class="col-md-4">
-              <label class="">2° Ano.:</label>
-              <input type="text" placeholder="Exemplo: 60" class="tfield form-control  nota" maxlength="3" pattern="[0-9]{2}|[1][0]{2}" title="Informe a nota com 2 dígitos de 00 a 100" onChange="Calc_Med_Pt()" id="virtport2" name="port2" value="" type="text" OnKeyPress="">
-            </div>
-            -->
-            <div class="col-md-4">
-              <label class="">Informe a média das notas em Português do 3° ou 4° Ano:</label>
-              <input type="text" placeholder="Exemplo: 60" class="tfield form-control  nota" maxlength="3" pattern="[0-9]{2}|[1][0]{2}" title="Informe a nota de 50 a 100" onChange="Calc_Med_Pt()" id="virtport3" name="port3" value="" type="text" OnKeyPress="">
             </div>
           </div>';
 }
