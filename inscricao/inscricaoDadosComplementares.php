@@ -650,7 +650,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                       ?>
                       <div class="row">
                         <div class="col-md-4">
-                          <label>Soma de Ciências:</label>
+                          <label>Média em Ciências:</label>
                           <input class="tfield form-control_disabled form-control" maxlength="4" id="maiorciencias" name="maiorciencias" value="" type="text" required readonly="1">
                         </div>
                       </div>
