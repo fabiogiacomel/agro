@@ -320,12 +320,12 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
       var curso = document.form1.curso.value;
 
       if (serial == 1) { //integrado
-        /*  media = (
+        media = (
            parseFloat(document.form1.mat6.value) +
            parseFloat(document.form1.mat7.value) +
            parseFloat(document.form1.mat8.value) +
            parseFloat(document.form1.mat9.value)) / 4;//agora so soma */
-        media = (parseFloat(document.form1.mat9.value)); //agora so soma
+        //media = (parseFloat(document.form1.mat9.value)); //agora so soma
       }
 
       if (serial == 2) { //Subsequente
@@ -371,61 +371,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
      if (media > 0) {
         document.getElementById('maiorciencias').value = media.toFixed(2);
-      }
-    }
-
-
-
-
-
-
-    function Calc_Med_Bio() {
-      var media = 0.00;
-      var serial = document.form1.serial.value;
-      var curso = document.form1.curso.value;
-      var curso2 = document.form1.curso2.value;
-
-      if (serial == 1) { //integrado
-      }
-
-      if (serial == 2) { //Subsequente
-        if (curso == 4 || curso2 == 4) { //Enfermagem
-          /*  media = (
-             parseFloat(document.form1.bio1.value) +
-             parseFloat(document.form1.bio2.value) +
-             parseFloat(document.form1.bio3.value)) / 3; */
-          media = (parseFloat(document.form1.bio3.value));
-        }
-      }
-
-
-      if (media > 0) {
-        document.getElementById('maiorbio').value = media.toFixed(2);
-      }
-    }
-
-    function Calc_Med_Qui() {
-      var media = 0.00;
-      var serial = document.form1.serial.value;
-      var curso = document.form1.curso.value;
-      var curso2 = document.form1.curso2.value;
-
-      if (serial == 1) { //integrado
-      }
-
-      if (serial == 2) { //Subsequente
-        if (curso == 4 || curso2 == 4) { //Enfermagem
-          /* media = (
-            parseFloat(document.form1.qui1.value) +
-            parseFloat(document.form1.qui2.value) +
-            parseFloat(document.form1.qui3.value)) / 3; */
-          media = (parseFloat(document.form1.qui3.value));
-        }
-      }
-
-
-      if (media > 0) {
-        document.getElementById('maiorqui').value = media.toFixed(2);
       }
     }
 
