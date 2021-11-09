@@ -409,7 +409,7 @@ if (strtotime($data1) > strtotime($data2)) {
     <div class="col-xl-8 col-12">
       <div class="card px-2">
         <div class="card-header">
-          <h2 class="form-section text-center"><img class="img-fluid" src="/images/pageheader.png" alt="Inscrições"></h2>
+          <h2 class="form-section text-center"><img class="img-fluid" src="inscricao/images/pageheader.png" alt="Inscrições"></h2>
           <a class="heading-elements-toggle"><i class="la la-ellipsis-v font-medium-3"></i></a>
         </div>
         <div class="card-content collapse show">
