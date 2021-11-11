@@ -68,7 +68,7 @@
         <!--*************************************************************************************-->
 
 
-
+    </br>
         <h2>Lista de Inscritos Técnico em Agronegócios</h2>
         <?php
         echo '<table class="table table-striped">';
@@ -99,7 +99,7 @@
         <!--*************************************************************************************-->
 
 
-
+        </br>
         <h2>Lista de Inscritos Técnico Agrícola</h2>
         <?php
         echo '<table class="table table-striped">';
