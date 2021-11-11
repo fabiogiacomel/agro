@@ -69,15 +69,15 @@
 
 
 
-        <h2>Quantidade total de Inscritos Integrado.</h2>
+        <h2>Lista de Inscritos TÉCNICO EM AGRONEGÓCIOS.</h2>
         <?php
         echo '<table class="table">';
-        echo "<thead> <tr><th>Curso</th><th>Inscritos</th></tr></thead><tbody>";
+        echo "<thead> <tr><th>Nome</th><th>Telefone</th></tr></thead><tbody>";
 
         try {
             $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
             $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-            $stmt = $conn->prepare("SELECT * FROM InscritosIntegrado");
+            $stmt = $conn->prepare("SELECT * FROM TecAgronegocio");
             $stmt->execute();
 
             // set the resulting array to associative
@@ -100,7 +100,7 @@
 
 
 
-        <h2>Quantidade total de Inscritos Subsequente.</h2>
+        <h2>Lista de Inscritos TÉCNICO AGRÍCOLA/h2>
         <?php
         echo '<table class="table">';
         echo "<thead> <tr><th>Curso</th><th>Inscritos</th></tr></thead><tbody>";
@@ -108,7 +108,7 @@
         try {
             $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
             $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-            $stmt = $conn->prepare("SELECT * FROM InscritosSub");
+            $stmt = $conn->prepare("SELECT * FROM TecAgricola");
             $stmt->execute();
 
             // set the resulting array to associative
