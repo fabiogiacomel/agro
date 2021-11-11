@@ -42,7 +42,7 @@
 
         $servername = "localhost";
         $username = "u224722929_agro";
-        $password = "Lruf9H%$Yo1i";
+        $password = 'Lruf9H%$Yo1i';
         $dbname = "u224722929_agro";
 
         try {
