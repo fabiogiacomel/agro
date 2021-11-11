@@ -71,7 +71,7 @@
 
         <h2>Lista de Inscritos Técnico em Agronegócios</h2>
         <?php
-        echo '<table class="table">';
+        echo '<table class="table table-striped">';
         echo "<thead> <tr><th>Nome</th><th>Telefone</th></tr></thead><tbody>";
 
         try {
@@ -102,7 +102,7 @@
 
         <h2>Lista de Inscritos Técnico Agrícola</h2>
         <?php
-        echo '<table class="table">';
+        echo '<table class="table table-striped">';
         echo "<thead> <tr><th>Curso</th><th>Inscritos</th></tr></thead><tbody>";
 
         try {
