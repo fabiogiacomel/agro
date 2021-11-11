@@ -724,9 +724,10 @@ function campos_matematica_integrado()
               <input type="text" placeholder="Exemplo: 60" class="tfield form-control  nota" maxlength="3" pattern="[0-9]{2}|[1][0]{2}" title="Informe a nota com 2 dígitos de 00 a 100"  onChange="Calc_Med_Mt()" id="virtmat8" name="mat8" value="" type="text" OnKeyPress="">
             </div>
             <div class="col-md-3">
-              <label>9° ano: Considerar as notas do 1º e 2º Trimestre somadas e divididas por 2</label>
+              <label>9° ano </label>
               <input type="text" placeholder="Exemplo: 60" class="tfield form-control  nota" maxlength="3" pattern="[0-9]{2}|[1][0]{2}" title="Informe a nota com 2 dígitos de 00 a 100"  onChange="Calc_Med_Mt()" id="virtmat0" name="mat9" value="" type="text" OnKeyPress="">
-            </div>
+              <p> Considerar as notas do 1º e 2º Trimestre somadas e divididas por 2</p>
+              </div>
           </div>';
 }
 
