@@ -438,7 +438,7 @@ if (strtotime($data1) > strtotime($data2)) {
 
                 <div class="form-group row">
                   <div class="col-md-12">
-                     <p> Os cursos ofertados para alunos que concluiram ou irão concluir o  9º Ano do fundamental.</p>
+                     <p> Os cursos ofertados são para alunos que concluiram ou irão concluir o  9º Ano do fundamental.</p>
                       </br>
                       <label> <p> Modalidade:</p></label>
                     <select name="serial" onChange="valida_curso();valida_curso2();" class="form-control" required>
