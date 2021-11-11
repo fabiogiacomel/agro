@@ -580,14 +580,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                       <!-- S U B S E Q U E N T E -->
                       <strong>Ensino fundamental:</strong> Se você está cursando ou terminou o Ensino fundamental digite a média das notas de
                       Língua Portuguesa e Matemática do Histórico Escolar do 9° ano, caso não concluiu ainda o 9° ano, solicite suas notas no Colégio em que está cursando.<br />
-                      <strong>Ensino médio:</strong> Se você está cursando ou terminou o Ensino Médio (antigo 2º Grau) digite a média das notas de
-                      Língua Portuguesa e Matemática do Histórico Escolar da 3a série se ensino regular ou da 4a série se ensino técnico de 4 anos
-                      , caso não concluiu ainda a 3a série do Ensino Médio, solicite suas notas no Colégio em que está cursando.<br />
-                      <strong>ENEM:</strong> Caso você deseje utilizar a nota do ENEM é necessário comparecer na secretaria para fazer a inscrição<br />
-                      <strong>EJA/ENCCEJA:</strong> Caso você concluiu o Ensino Médio na modalidade EJA/ENCCEJA/SUPLETIVO é necessário comparecer na secretaria e fazer a inscrição
-                      presencialmente.<br />
-                      <strong>CEEBJA: </strong>Caso tenha concluído o Ensino Médio na modalidade CEEBJA, repetir as notas de cada disciplina nos três campos.<br />
-                      <strong>Ensino médio de 4 anos: </strong>Calcule a média das 4 notas e repita nos 3 campos.<br />
                       <!-- I N T E G R A D O -->
 
                       <!-- INTEGRADO = Se você está cursando ou terminou o Ensino Médio (antigo 2º Grau) digite as notas de
