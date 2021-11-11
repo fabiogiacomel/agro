@@ -69,7 +69,7 @@
 
 
 
-        <h2>Lista de Inscritos TÉCNICO EM AGRONEGÓCIOS.</h2>
+        <h2>Lista de Inscritos Técnico em Agronegócios</h2>
         <?php
         echo '<table class="table">';
         echo "<thead> <tr><th>Nome</th><th>Telefone</th></tr></thead><tbody>";
@@ -100,7 +100,7 @@
 
 
 
-        <h2>Lista de Inscritos TÉCNICO AGRÍCOLA</h2>
+        <h2>Lista de Inscritos Técnico Agrícola</h2>
         <?php
         echo '<table class="table">';
         echo "<thead> <tr><th>Curso</th><th>Inscritos</th></tr></thead><tbody>";
