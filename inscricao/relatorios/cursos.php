@@ -72,7 +72,7 @@
         <h2>Lista de Inscritos Técnico em Agronegócios</h2>
         <?php
         echo '<table class="table table-striped">';
-        echo "<thead> <tr><th>Nome</th><th>Telefone</th></tr></thead><tbody>";
+        echo "<thead> <tr><th>Nome</th><th>Fone</th></tr></thead><tbody>";
 
         try {
             $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
@@ -103,7 +103,7 @@
         <h2>Lista de Inscritos Técnico Agrícola</h2>
         <?php
         echo '<table class="table table-striped">';
-        echo "<thead> <tr><th>Curso</th><th>Inscritos</th></tr></thead><tbody>";
+        echo "<thead> <tr><th>Nome</th><th>Fone</th></tr></thead><tbody>";
 
         try {
             $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
