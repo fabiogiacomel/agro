@@ -42,7 +42,7 @@
             try {
                 $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
                 $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-                $stmt = $conn->prepare("SELECT nome, cpf cast(pontuacao as unsigned integer) as pontuacao FROM inscricoesnovas WHERE curso=18  ORDER by pontuacao DESC");
+                $stmt = $conn->prepare("SELECT nome, cpf, pontuacao FROM inscricoesnovas WHERE curso=18  ORDER by pontuacao DESC");
                 $stmt->execute();
 
                 // set the resulting array to associative
