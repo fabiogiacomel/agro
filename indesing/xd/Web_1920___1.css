@@ -1,0 +1,26 @@
+:root {
+	--web-view-ids: Web_1920__1,Web_1920__2;
+	--web-view-name: Web 1920 – 1;
+	--web-view-id: Web_1920__1;
+	--web-scale-to-fit: false;
+	--web-scale-to-fit-type: default;
+	--web-enable-scale-up: true;
+	--web-scale-on-resize: true;
+	--web-show-scale-controls: true;
+	--web-scale-on-double-click: true;
+	--web-center-horizontally: false;
+	--web-center-vertically: false;
+	--web-actual-size-on-double-click: true;
+	--web-navigate-on-keypress: true;
+	--web-refresh-for-changes: true;
+	--web-add-image-compare: true;
+	--web-show-by-media-query: false;
+	--web-application: false;
+	--web-show-navigation-controls: true;
+	--web-enable-deep-linking: true;
+	--web-is-overlay: false;
+}
+#Web_1920__1,
+#Web_1920__2 {
+	display: none;
+}
